@@ -1,0 +1,17 @@
+{
+  "name": "upfile",
+  "repo": "pazguille/upfile",
+  "description": "Makes file inputs a pleasure to look at.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "upfile.css"
+  ]
+}
