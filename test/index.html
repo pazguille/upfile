@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Upfile Component</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!--link rel="stylesheet" href="../build/build.css"-->
+        <link rel="stylesheet" href="../upfile.css">
+        <style>
+            body {
+                font-family: "Helvetica Neue", Helvetica, Arial, serif;
+                background-color: #f6f8f8;
+                color: #5a6673;
+                text-shadow: 0 -1px #FFF;
+                text-align: center;
+            }
+
+            a {
+                color: #0637B3;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: #005580;
+            }
+
+            a:hover,
+            a:focus {
+                text-decoration: underline;
+            }
+
+            h1 {
+                font-size: 4em;
+            }
+
+            footer {
+                margin: 30px auto;
+                text-align: center;
+            }
+
+            .heart {
+                font-style: normal;
+                font-weight: 500;
+                color: #c0392b;
+            }
+
+            #twitter {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
+
+            #github {
+                display: inline-block;
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 100;
+                border: 0;
+                width: 149px;
+                height: 149px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Upfile.js Component</h1>
+        <form action="/">
+            <div class="upfile">
+                <!--label class="upfile-label">Select files...</label-->
+                <ol class="upfile-list">
+                    <li>foo.png</li>
+                    <li>bar.png</li>
+                    <li>foobar.png</li>
+                    <li>foo.png</li>
+                    <li>bar.png</li>
+                    <li>foobar.png</li>
+                    <li>foo.png</li>
+                    <li>bar.png</li>
+                    <li>foobar.png</li>
+                    <li>foo.png</li>
+                    <li>bar.png</li>
+                    <li>foobar.png</li>
+                    <li>foo.png</li>
+                    <li>bar.png</li>
+                    <li>foobar.png</li>
+
+                </ol>
+                <input type="file" name="files[]" class="upfile-button" multiple>
+            </div>
+        <form>
+
+        <footer>
+            <iframe id="twitter" allowtransparency="true" frameborder="0" width="100" height="22" scrolling="no" src="https://platform.twitter.com/widgets/tweet_button.html?text=Upfile.js%3A%20Flipping%20elements%20and%20show%20a%20loading%20indicator%20easily.&amp;url=http%3A%2F%2Fpazguille.github.io%2Fupfile"></iframe>
+
+            <a href="https://github.com/pazguille/upfile" id="github"><img width="149" height="149" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+            by <a href="http://pazguille.me/">Guille Paz</a> with <i class="heart">❤</i>
+        </footer>
+
+        <!--script src="../build/build.js"></script-->
+        <script>
+        </script>
+    </body>
+</html>
