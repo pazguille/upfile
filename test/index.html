@@ -5,8 +5,7 @@
         <title>Upfile Component</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <!--link rel="stylesheet" href="../build/build.css"-->
-        <link rel="stylesheet" href="../upfile.css">
+        <link rel="stylesheet" href="../build/build.css">
         <style>
             body {
                 font-family: "Helvetica Neue", Helvetica, Arial, serif;
@@ -67,25 +66,7 @@
         <h1>Upfile.js Component</h1>
         <form action="/">
             <div class="upfile">
-                <!--label class="upfile-label">Select files...</label-->
-                <ol class="upfile-list">
-                    <li>foo.png</li>
-                    <li>bar.png</li>
-                    <li>foobar.png</li>
-                    <li>foo.png</li>
-                    <li>bar.png</li>
-                    <li>foobar.png</li>
-                    <li>foo.png</li>
-                    <li>bar.png</li>
-                    <li>foobar.png</li>
-                    <li>foo.png</li>
-                    <li>bar.png</li>
-                    <li>foobar.png</li>
-                    <li>foo.png</li>
-                    <li>bar.png</li>
-                    <li>foobar.png</li>
-
-                </ol>
+                <label class="upfile-label">Select files...</label>
                 <input type="file" name="files[]" class="upfile-button" multiple>
             </div>
         <form>
@@ -98,8 +79,11 @@
             by <a href="http://pazguille.me/">Guille Paz</a> with <i class="heart">❤</i>
         </footer>
 
-        <!--script src="../build/build.js"></script-->
+        <script src="../build/build.js"></script>
         <script>
+            var Upfile = require('upfile'),
+                el = document.querySelector('.upfile-button'),
+                up = new Upfile(el);
         </script>
     </body>
 </html>

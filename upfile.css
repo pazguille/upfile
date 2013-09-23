@@ -20,7 +20,7 @@
 }
 
 .upfile-list {
-    margin: 0;
+    margin: 1em;
     font-size: .6em;
     text-align: left;
     line-height: 1.5em;
@@ -34,4 +34,8 @@
     top: 0;
     font-size: 6em;
     opacity: 0;
+}
+
+.upfile-hide {
+    display: none;
 }
