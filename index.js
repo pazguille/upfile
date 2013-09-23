@@ -6,9 +6,8 @@ var win = window,
 /**
  * Create a new instance of Upfile.
  * @constructor
- * @param {HTMLElement} el A given HTML element to create an instance of Flipload.
+ * @param {HTMLElement} el A given HTML element to create an instance of Upfile.
  * @param {Object} [options] Options to customize an instance.
- * @param {String} [options.className] Add a custom className to the reverse element to add custom CSS styles.
  * @returns {upfile} Returns a new instance of Upfile.
  */
 function Upfile(el, options) {
