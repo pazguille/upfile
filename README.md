@@ -24,8 +24,8 @@ First, you should add the CSS file to your markup:
 You should use the following HTML code on your files inputs:
 ```html
 <div class="upfile">
-    <label class="upfile-label">Select files...</label>
-    <input id="demoInputFile" type="file" name="files[]" class="upfile-button" multiple>
+    <label class="upfile-label" for="demoInputFile">Select files...</label>
+    <input id="demoInputFile" class="upfile-button" type="file" name="files[]" multiple>
 </div>
 ```
 
