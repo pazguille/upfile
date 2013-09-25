@@ -1,6 +1,6 @@
 # Upfile JS
 
-Makes file inputs a pleasure to use.
+Makes file inputs a pleasure to use with progressive enhancement.
 
 ## Installation
 
