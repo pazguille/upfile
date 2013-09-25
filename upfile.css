@@ -36,6 +36,10 @@
     opacity: 0;
 }
 
+.upfile-button[disabled] {
+    cursor: not-allowed;
+}
+
 .upfile-hide {
     display: none;
 }

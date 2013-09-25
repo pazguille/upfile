@@ -27,12 +27,8 @@ Upfile.prototype.initialize = function(el, options) {
     this.labelNode = this.container.children[0];
     this._renderList();
 
-    this.files = [];
-
-    this._enabled = true;
-
-    this.el[bind](CHANGE, function () {
-        that._addFiles(this.files);
+    this.el[bind](CHANGE, function (eve) {
+        that._updateList(this.files);
     });
 
     this.el.upfile = this;
@@ -40,15 +36,23 @@ Upfile.prototype.initialize = function(el, options) {
     return this;
 };
 
-Upfile.prototype._addFiles = function (files) {
+Upfile.prototype._updateList = function (files) {
     var len = files.length,
         i = 0;
 
-    this.labelNode.className = 'upfile-hide';
-    this.listNode.className = this.listNode.className.replace(/upfile-hide/, '');
+    this.listNode.innerHTML = '';
 
-    for (i; i < len; i += 1) {
-        this.listNode.appendChild(this._renderFile(files[i].name));
+    if (len !== 0) {
+        this.labelNode.className += ' upfile-hide';
+        this.listNode.className = this.listNode.className.replace(/\s?upfile-hide\s?/, '');
+
+        for (i; i < len; i += 1) {
+            this.listNode.appendChild(this._renderFile(files[i].name));
+        }
+
+    } else {
+        this.listNode.className += ' upfile-hide';
+        this.labelNode.className = this.labelNode.className.replace(/\s?upfile-hide\s?/, '');
     }
 }
 
@@ -67,6 +71,30 @@ Upfile.prototype._renderFile = function (name) {
 
     return li;
 }
+
+/**
+ * Enables an instance of Upfile.
+ * @memberof! Upfile.prototype
+ * @function
+ * @returns {upfile} Returns the instance of Upfile.
+ */
+Upfile.prototype.enable = function () {
+    this.el.removeAttribute('disabled');
+
+    return this;
+};
+
+/**
+ * Disables an instance of Upfile.
+ * @memberof! Upfile.prototype
+ * @function
+ * @returns {upfile} Returns the instance of Upfile.
+ */
+Upfile.prototype.disable = function () {
+    this.el.setAttribute('disabled', 'disabled');
+
+    return this;
+};
 
 // Expose Upfile
 exports = module.exports = Upfile;
