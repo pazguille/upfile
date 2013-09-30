@@ -18,7 +18,7 @@ function Upfile(el) {
     this._initialize(el);
 }
 
-Upfile.prototype._initialize = function(el) {
+Upfile.prototype._initialize = function (el) {
     var that = this;
 
     this.el = el;
@@ -26,7 +26,7 @@ Upfile.prototype._initialize = function(el) {
     this.labelNode = this.container.children[0];
     this._renderList();
 
-    this.el[bind](CHANGE, function (eve) {
+    this.el[bind](CHANGE, function () {
         that._updateList(this.files);
     });
 
@@ -55,9 +55,9 @@ Upfile.prototype._updateList = function (files) {
     }
 
     return this;
-}
+};
 
-Upfile.prototype._renderList = function() {
+Upfile.prototype._renderList = function () {
     this.listNode = doc.createElement('ol');
     this.listNode.className = 'upfile-list upfile-hide';
 
@@ -71,7 +71,7 @@ Upfile.prototype._renderFile = function (name) {
     li.innerHTML = name;
 
     return li;
-}
+};
 
 /**
  * Enables an instance of Upfile.
