@@ -56,17 +56,39 @@
                 width: 149px;
                 height: 149px;
             }
+
+            form {
+                margin: 30px 0 80px;
+            }
         </style>
     </head>
     <body>
         <h1>Upfile.js Component</h1>
         <h2>Makes file inputs a pleasure to use with progressive enhancement.</h2>
+
+        <h3>1. HTML &rarr; Files input</h3>
+        <form action="/">
+            <div>
+                <label for="upfile-normal">Select files...</label>
+                <input id="upfile-normal" type="file" name="filesNormal[]"multiple>
+            </div>
+        </form>
+
+        <h3>2. HTML + CSS &rarr; Upfile</h3>
         <form action="/">
             <div class="upfile">
-                <label class="upfile-label">Select files...</label>
-                <input type="file" name="files[]" class="upfile-button" multiple>
+                <label for="upfile-css" class="upfile-label">Select files...</label>
+                <input id="upfile-css" type="file" name="filesCSS[]" class="upfile-button" multiple>
             </div>
-        <form>
+        </form>
+
+        <h3>3. HTML + CSS + JS &rarr; Upfile JS</h3>
+        <form action="/">
+            <div class="upfile">
+                <label for="upfile-js" class="upfile-label">Select files...</label>
+                <input id="upfile-js" type="file" name="filesJS[]" class="upfile-button" multiple>
+            </div>
+        </form>
 
         <footer>
             <a href="https://github.com/pazguille/upfile" id="github"><img width="149" height="149" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
@@ -77,7 +99,7 @@
         <script src="build/build.js"></script>
         <script>
             var Upfile = require('upfile'),
-                el = document.querySelector('.upfile-button'),
+                el = document.querySelector('#upfile-js'),
                 up = new Upfile(el);
         </script>
     </body>
