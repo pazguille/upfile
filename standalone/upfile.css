@@ -4,10 +4,10 @@
     border-radius: 20px;
     cursor: pointer;
     opacity: 1;
-    font-size: 2em;
-    line-height: 2em;
+    font-size: 32px;
+    line-height: 32px;
     width: 412px;
-    height: 224px;
+    height: 230px;
     position: relative;
     display: inline-block;
     overflow: auto;
@@ -16,14 +16,14 @@
 }
 
 .upfile-label {
-    line-height: 7em;
+    line-height: 230px;
 }
 
 .upfile-list {
-    margin: 1em;
-    font-size: .6em;
+    margin: 20px 10px;
+    font-size: 18px;
     text-align: left;
-    line-height: 1.5em;
+    line-height: 25px;
 }
 
 .upfile-button {
@@ -32,7 +32,7 @@
     left: 0;
     right: 0;
     top: 0;
-    font-size: 6em;
+    line-height: 226px;
     opacity: 0;
 }
 
