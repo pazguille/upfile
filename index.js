@@ -1,25 +1,24 @@
 var win = window,
     doc = win.document,
-    bind = (window.addEventListener !== undefined) ? 'addEventListener' : 'attachEvent',
+    bind = (win.addEventListener !== undefined) ? 'addEventListener' : 'attachEvent',
     CHANGE = (bind !== 'addEventListener') ? 'onchange' : 'change';
 
 /**
  * Create a new instance of Upfile.
  * @constructor
  * @param {HTMLElement} el A given HTML element to create an instance of Upfile.
- * @param {Object} [options] Options to customize an instance.
  * @returns {upfile} Returns a new instance of Upfile.
  */
-function Upfile(el, options) {
+function Upfile(el) {
 
     if (el === undefined) {
-        throw new Error('"Upfile(el, [options])": It must receive an element.');
+        throw new Error('"Upfile(el)": It must receive an element.');
     }
 
-    this.initialize(el, options);
+    this._initialize(el);
 }
 
-Upfile.prototype.initialize = function(el, options) {
+Upfile.prototype._initialize = function(el) {
     var that = this;
 
     this.el = el;
@@ -54,6 +53,8 @@ Upfile.prototype._updateList = function (files) {
         this.listNode.className += ' upfile-hide';
         this.labelNode.className = this.labelNode.className.replace(/\s?upfile-hide\s?/, '');
     }
+
+    return this;
 }
 
 Upfile.prototype._renderList = function() {

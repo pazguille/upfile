@@ -39,13 +39,12 @@ var Upfile = require('upfile');
 
 ## API
 
-### Upfile(el, [options])
+### Upfile(el)
 Create a new instance of `Upfile`.
 - `el`: A given `HTMLElement` file input to create an instance of `Upfile`.
-- `options`: An optional options `Object` to customize an instance.
 
 ```js
-var upfile = new Upfile(el, [options]);
+var upfile = new Upfile(el);
 ```
 
 ### Upfile#enable()
