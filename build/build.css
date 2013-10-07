@@ -22,6 +22,15 @@
     bottom: 0;
 }
 
+.upfile-label-hidden {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: none;
+}
+
+.upfile-label-disabled {
+    cursor: not-allowed;
+}
+
 .upfile-list {
     padding: 15px 45px;
     margin: 0;
@@ -37,15 +46,6 @@
     opacity: 0;
 }
 
-.upfile-button[disabled] {
-    cursor: not-allowed;
-}
-
 .upfile-hide {
     display: none;
-}
-
-.upfile-label-hidden {
-    color: rgba(0, 0, 0, 0);
-    text-shadow: none;
 }
