@@ -2,8 +2,6 @@
     background: rgba(0,0,0,.2);
     border: 3px dashed #FFF;
     border-radius: 20px;
-    cursor: pointer;
-    opacity: 1;
     font-size: 32px;
     line-height: 32px;
     width: 412px;
@@ -16,23 +14,26 @@
 }
 
 .upfile-label {
-    line-height: 230px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .upfile-list {
-    margin: 20px 10px;
+    padding: 15px 45px;
+    margin: 0;
     font-size: 18px;
     text-align: left;
     line-height: 25px;
 }
 
 .upfile-button {
-    cursor: pointer;
     position: absolute;
+    top: -50px;
     left: 0;
-    right: 0;
-    top: 0;
-    line-height: 226px;
     opacity: 0;
 }
 
@@ -42,4 +43,9 @@
 
 .upfile-hide {
     display: none;
+}
+
+.upfile-label-hidden {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: none;
 }
