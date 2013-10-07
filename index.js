@@ -92,6 +92,7 @@ Upfile.prototype._renderFile = function (name) {
  */
 Upfile.prototype.enable = function () {
     this.el.removeAttribute('disabled');
+    this.labelNode.className = this.labelNode.className.replace(/\s?upfile-label-disabled/, '');
 
     return this;
 };
@@ -104,6 +105,7 @@ Upfile.prototype.enable = function () {
  */
 Upfile.prototype.disable = function () {
     this.el.setAttribute('disabled', 'disabled');
+    this.labelNode.className += ' upfile-label-disabled';
 
     return this;
 };
