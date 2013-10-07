@@ -2,9 +2,15 @@
   "name": "upfile",
   "repo": "pazguille/upfile",
   "description": "Makes file inputs a pleasure to use.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "twitter": "@pazguille",
-  "keywords": [],
+  "keywords": [
+    "uploader",
+    "files",
+    "upload",
+    "form",
+    "input"
+  ],
   "dependencies": {},
   "development": {},
   "license": "MIT",
